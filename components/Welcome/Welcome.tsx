@@ -20,6 +20,11 @@ export function Welcome() {
         </Anchor>
         . To get started edit index.tsx file.
       </Text>
+        <div className='text-3xl font-bold underline h-screen bg-blue-500'>
+        <p>
+        test
+        </p>
+      </div>
     </>
   );
 }
