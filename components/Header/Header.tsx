@@ -33,10 +33,9 @@ const Header = ({ links }: Links) => {
     <>
       <Sidebar show={opened} setShow={toggleOpened} links={links} />
       <HeaderMantine
-        className="py-2 bg-gray-900 absolute top-0"
+        className="py-2 absolute top-0"
         height={60}
-        sx={{ borderBottom: 0 }}
-        // mb={120}
+        sx={{ borderBottom: 0, background: "transparent" }}
       >
         <Container className="flex align-items-center h-full" fluid>
           <Group className="flex sm:flex-1">
@@ -62,8 +61,9 @@ const Header = ({ links }: Links) => {
             <Button
               radius="xl"
               size="md"
-              sx={{ height: 30, color: "white" }}
-              variant="filled"
+              sx={{ height: 30 }}
+              variant="white"
+              color={"dark"}
               // className="border-white bg-white hover:bg-gray-300 hover:border-gray-300 text-black"
             >
               Login

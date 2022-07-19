@@ -14,7 +14,9 @@ export default function App(props: AppProps) {
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
 
-        <MantineProvider theme={{colorScheme: "light"}}>
+        <MantineProvider theme={{colors: {
+        white: ["#fff"],
+      }}} withGlobalStyles withNormalizeCSS>
             <Component {...pageProps} />
         </MantineProvider>
     </>
