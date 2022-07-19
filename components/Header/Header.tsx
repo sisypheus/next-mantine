@@ -33,10 +33,10 @@ const Header = ({ links }: Links) => {
     <>
       <Sidebar show={opened} setShow={toggleOpened} links={links} />
       <HeaderMantine
-        className="bg-gray-900 py-2"
+        className="py-2 bg-gray-900 absolute top-0"
         height={60}
         sx={{ borderBottom: 0 }}
-        mb={120}
+        // mb={120}
       >
         <Container className="flex align-items-center h-full" fluid>
           <Group className="flex sm:flex-1">
@@ -48,7 +48,9 @@ const Header = ({ links }: Links) => {
               color={"white"}
             />
             <Group>
-              <Title className="text-white" order={3}>
+              <Title sx={{
+                color: "white"
+              }} order={3}>
                 Babble
               </Title>
             </Group>
@@ -56,14 +58,13 @@ const Header = ({ links }: Links) => {
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>
-          <Group className="flex flex-1 justify-end">
+          <Group sx={{display: "flex", flexGrow: 1, justifyContent: "end"}}>
             <Button
               radius="xl"
               size="md"
-              sx={{ height: 30 }}
+              sx={{ height: 30, color: "white" }}
               variant="filled"
-              className="border-white bg-white hover:bg-gray-300 hover:border-gray-300 text-black"
-              color={"white"}
+              // className="border-white bg-white hover:bg-gray-300 hover:border-gray-300 text-black"
             >
               Login
             </Button>
